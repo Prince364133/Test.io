@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Untitled</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create a Test</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background: linear-gradient(135deg, skyblue, lightyellow);
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      animation: gradientAnimation 10s ease infinite;
+    }
+    @keyframes gradientAnimation {
+      0% { background: linear-gradient(135deg, skyblue, lightyellow); }
+      50% { background: linear-gradient(135deg, lightyellow, skyblue); }
+      100% { background: linear-gradient(135deg, skyblue, lightyellow); }
+    }
+    h1 {
+      text-align: center;
+      color: blue;
+      font-family: 'Cursive', cursive;
+    }
+    label {
+      display: block;
+      margin: 10px 0 5px;
+      font-weight: bold;
+    }
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      transition: box-shadow 0.3s ease-in-out;
+    }
+    input:focus, select:focus {
+      box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+      outline: none;
+    }
+    button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    button:active {
+      background-color: #004494;
+      box-shadow: 0 0 15px rgba(0, 123, 255, 0.5);
+    }
+    #summary {
+      display: none;
+      margin-top: 20px;
+    }
+    #summary h2 {
+      color: #333;
+    }
+    #summary p {
+      white-space: pre-wrap;
+      font-family: monospace;
+    }
+    .popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+    }
+    .popup button {
+      margin-top: 10px;
+      background-color: #28a745;
+    }
+    .popup-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 999;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Test Creation Form</h1>
+    <p id="formIntro">Please fill out the following details to create a test. Your inputs will be summarized and ready to copy.</p>
+    
+ 
+
+     
+
+      <label for="publisher">Publisher Name:</label>
+      <input type="text" id="publisher" name="publisher" placeholder="e.g., NCERT, OSWAL" required>
+
+      <label for="class">Class:</label>
+     <select id="class" name="class" required>
+        <option value="L.K.G">L.K.G</option>
+        <option value="U.K.G">U.K.G</option>
+         <option value=" 1 ">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+          <option value="4">4</option>
+           <option value="5">5</option>
+        <option value="6">6</option>
+           <option value="7">7</option>
+        <option vlaue="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+          <option value="11">11</option>
+           <option value="12">12</option>
+        <option value="Graduation">Graduation</option>
+           <option value="competition">Competition</option>
+    </select> 
+
+      <label for="subject">Subject:</label>
+      <input type="text" id="subject" name="subject" required>
+
+      <label for="testLevel">Test words:</label>
+      <select id="testLevel" name="testLevel" required>
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+      </select>
+
+      <label for="chapter">Chapter number:</label>
+      <input type="number" id="chapter" name="chapter" required placeholder="Required">
+
+      <label for="chapterName">Chapter Name:</label>
+      <input type="text" id="chapterName" name="chapterName" required placeholder="Required" >
+
+      <label for="questions">total Questions:</label>
+      <input type="number" id="questions" name="questions" required>
+ 
+        <label for="mcq">MCQ:</label>
+       <input type="number" id="mcq" name="mcq" required>
+      
+      <label for="t">truefalse:</label>
+       <input type="number" id="t" name="t" required>
+      
+      <label for="f">fill in the blanks:</label>
+       <input type="number" id="f" name="f" required>
+        
+         <label for="A">Assertion/region:</label>
+       <input type="number" id="A" name="A" required>
+      
+         <label for="short">short Question:</label>
+      <input type="number" id="short" name="short" required>
+        
+        <label for="long">long Questions:</label>
+      <input type="number" id="long" name="long" required> 
+        
+        <label for="source">Question Source:</label>
+       <select id="source" name="source" required>
+        <option value="exercise">From Exercise</option>
+        <option value="chapter">From Chapter</option>
+          <option value="Book">Form whole book</option>
+      </select>
+
+      <label for="totalMarks">Total Marks:</label>
+      <input type="number" id="totalMarks" name="totalMarks" required>
+
+      <label for="passingMarks">Passing Marks:</label>
+      <input type="number" id="passingMarks" name="passingMarks" required placeholder="Minimum marks to get pass" >
+
+      <label for="difficulty">Test Difficulty Level:</label>
+      <select id="difficulty" name="difficulty" required>
+        <option value="easy">Easy</option>
+        <option value="normal">Normal</option>
+        <option value="hard">Hard</option>
+      </select>
+        
+         <label for="language">Select language:</label>
+      <select id="language" name="language" required>
+        <option value="hindi">hindi</option>
+        <option value="english">english</option>
+        <option value="urdu">urdu</option>
+          <option value="sanskrit">sanskrit</option>
+      </select>
+
+    <label for="Numerical">Question Type:</label>
+      <select id="numerical" name="numerical" required>
+        <option value="theory only">theory only</option>
+        <option value="numericals and theory ">theory + numerical</option>
+        <option value="numericals only">numerical only</option>
+         </select>  
+      
+      <label for="specificCommand">Describe here if you want any specific type of question or other things in your test:</label>
+      <input type="text" id="specificCommand" name="specificCommand" placeholder="Optional commands">
+
+      <button type="button" id="createTest">Create Test</button>
+    </form>
+
+    <div id="summary">
+      <h2>Test Summary</h2>
+      <p id="summaryText"></p>
+      <button id="copySummary">Copy to Clipboard</button>
+    </div>
+  </div>
+
+  <div class="popup-overlay" id="popupOverlay"></div>
+  <div class="popup" id="popup">
+    <h2>Test Created</h2>
+    <p>Copy summary - back  - click on "create test" button - paste summary there then - copy the reply - come back to app and click "create test paper 📜" button - paste text on screen and then download the test paper 🗞️.  </p>
+    <button id="popupClose">Close</button>
+  </div>
+<script>
+document.getElementById('createTest').addEventListener('click', function() {
+    // Gather form data
+    const formData = {
+        publisher: document.getElementById('publisher').value,
+        class: document.getElementById('class').value,
+        subject: document.getElementById('subject').value,
+        testLevel: document.getElementById('testLevel').value,
+        chapter: document.getElementById('chapter').value,
+        chapterName: document.getElementById('chapterName').value,
+        questions: document.getElementById('questions').value,
+        mcq: document.getElementById('mcq').value,
+        short: document.getElementById('short').value,
+        long: document.getElementById('long').value,
+        f: document.getElementById('f').value,
+        t: document.getElementById('t').value,
+        A: document.getElementById('A').value,
+        source: document.getElementById('source').value,
+        totalMarks: document.getElementById('totalMarks').value,
+        passingMarks: document.getElementById('passingMarks').value,
+        difficulty: document.getElementById('difficulty').value,
+        language: document.getElementById('language').value,
+        numerical: document.getElementById('numerical').value,
+        specificCommand: document.getElementById('specificCommand').value
+    };
+
+    // Create summary text
+    const summaryText = `Subject: ${formData.subject}\nClass: ${formData.class}\nChapter number: ${formData.chapter}\nChapter Name: ${formData.chapterName}\nlanguage  : ${formData.language}\nTest words : ${formData.testLevel}\nTotal Marks: ${formData.totalMarks}\nPassing Marks: ${formData.passingMarks}\nDifficulty Level: ${formData.difficulty}\nNumber of Questions: ${formData.questions}\nnumber of mcq: ${formData.mcq}\nno. of Assertion/region: ${formData.A}\nnumber of short question: ${formData.short}\nnumber of long question: ${formData.long}\nnumber of fill in the blanks: ${formData.f}\nnumber of true/false: ${formData.t}\nQuestion Source: ${formData.source}\nPublisher: ${formData.publisher}\nwhile making give questions from  : ${formData.numerical}\nSpecific Command: ${formData.specificCommand}\ncreate test and make it in a proper way to which I can directly copy it and paste it and then make a print of it and put all the options in vertical series and use CBSE formate for making questions `;
+
+    // Display summary
+    document.getElementById('summaryText').innerText = summaryText;
+    document.getElementById('summary').style.display = 'block';
+
+    // Show popup
+    document.getElementById('popup').style.display = 'block';
+    document.getElementById('popupOverlay').style.display = 'block';
+
+    // Copy to clipboard functionality and open new window
+    navigator.clipboard.writeText(summaryText).then(() => {
+        alert('Summary copied to clipboard!');
+        // Open new window
+        window.open('https://chatgpt.com/', '_blank');
+    })
+    .catch(err => {
+        console.error('Failed to copy text: ', err);
+    });
+
+    // Close popup
+    document.getElementById('popupClose').addEventListener('click', function() {
+        document.getElementById('popup').style.display = 'none';
+        document.getElementById('popupOverlay').style.display = 'none';
+    });
+});
+</script>
+</body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>
