@@ -118,8 +118,8 @@
 </head>
 <body>
   <div class="container">
-    <h1>Test Creation Form</h1>
-    <p id="formIntro">Please fill out the following details to create a test. Your inputs will be summarized and ready to copy.</p>
+    <h1>Assignment & Test</h1>
+    <p id="formIntro">Please fill out the following details to create.</p>
     
  
 
@@ -151,7 +151,7 @@
       <label for="subject">Subject:</label>
       <input type="text" id="subject" name="subject" required>
 
-      <label for="testLevel">Test words:</label>
+      <label for="testLevel">words:</label>
       <select id="testLevel" name="testLevel" required>
         <option value="easy">Easy</option>
         <option value="medium">Medium</option>
@@ -198,14 +198,14 @@
       <label for="passingMarks">Passing Marks:</label>
       <input type="number" id="passingMarks" name="passingMarks" required placeholder="Minimum marks to get pass" >
 
-      <label for="difficulty">Test Difficulty Level:</label>
+      <label for="difficulty">Difficulty Level:</label>
       <select id="difficulty" name="difficulty" required>
         <option value="easy">Easy</option>
         <option value="normal">Normal</option>
         <option value="hard">Hard</option>
       </select>
         
-         <label for="language">Select language:</label>
+         <label for="language">language:</label>
       <select id="language" name="language" required>
         <option value="hindi">hindi</option>
         <option value="english">english</option>
@@ -213,17 +213,17 @@
           <option value="sanskrit">sanskrit</option>
       </select>
 
-    <label for="Numerical">Question Type:</label>
+    <label for="Numerical">Type:</label>
       <select id="numerical" name="numerical" required>
         <option value="theory only">theory only</option>
         <option value="numericals and theory ">theory + numerical</option>
         <option value="numericals only">numerical only</option>
          </select>  
       
-      <label for="specificCommand">Describe here if you want any specific type of question or other things in your test:</label>
+      <label for="specificCommand">Describe any specific things in Assignmetn/test:</label>
       <input type="text" id="specificCommand" name="specificCommand" placeholder="Optional commands">
 
-      <button type="button" id="createTest">Create Test</button>
+      <button type="button" id="createTest">Create</button>
     </form>
 
     <div id="summary">
@@ -236,7 +236,7 @@
   <div class="popup-overlay" id="popupOverlay"></div>
   <div class="popup" id="popup">
     <h2>Test Created</h2>
-    <p>Copy summary - back  - click on "create test" button - paste summary there then - copy the reply - come back to app and click "create test paper 📜" button - paste text on screen and then download the test paper 🗞️.  </p>
+    <p>Copy summary - Go back  -  generate PDF </p>
     <button id="popupClose">Close</button>
   </div>
 <script>
@@ -266,7 +266,7 @@ document.getElementById('createTest').addEventListener('click', function() {
     };
 
     // Create summary text
-    const summaryText = `Subject: ${formData.subject}\nClass: ${formData.class}\nChapter number: ${formData.chapter}\nChapter Name: ${formData.chapterName}\nlanguage  : ${formData.language}\nTest words : ${formData.testLevel}\nTotal Marks: ${formData.totalMarks}\nPassing Marks: ${formData.passingMarks}\nDifficulty Level: ${formData.difficulty}\nNumber of Questions: ${formData.questions}\nnumber of mcq: ${formData.mcq}\nno. of Assertion/region: ${formData.A}\nnumber of short question: ${formData.short}\nnumber of long question: ${formData.long}\nnumber of fill in the blanks: ${formData.f}\nnumber of true/false: ${formData.t}\nQuestion Source: ${formData.source}\nPublisher: ${formData.publisher}\nwhile making give questions from  : ${formData.numerical}\nSpecific Command: ${formData.specificCommand}\ncreate test and make it in a proper way to which I can directly copy it and paste it and then make a print of it and put all the options in vertical series and use CBSE formate for making questions `;
+    const summaryText = `Subject: ${formData.subject}\nClass: ${formData.class}\nChapter number: ${formData.chapter}\nChapter Name: ${formData.chapterName}\nlanguage  : ${formData.language}\nTest words : ${formData.testLevel}\nTotal Marks: ${formData.totalMarks}\nPassing Marks: ${formData.passingMarks}\nDifficulty Level: ${formData.difficulty}\nNumber of Questions: ${formData.questions}\nnumber of mcq: ${formData.mcq}\nno. of Assertion/region: ${formData.A}\nnumber of short question: ${formData.short}\nnumber of long question: ${formData.long}\nnumber of fill in the blanks: ${formData.f}\nnumber of true/false: ${formData.t}\nQuestion Source: ${formData.source}\nPublisher: ${formData.publisher}\nwhile making give questions from  : ${formData.numerical}\nSpecific Command: ${formData.specificCommand}\n you are a CBSE & NCERT teacher create test/ASSIGNMENT and make it in a proper way to which I can directly copy it and paste it and then make a print of it and put all the options in vertical series and use CBSE formate for making questions and only provide the contest & do not write any introduction , explanation or extra comments  `;
 
     // Display summary
     document.getElementById('summaryText').innerText = summaryText;
