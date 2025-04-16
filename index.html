@@ -266,7 +266,35 @@ document.getElementById('createTest').addEventListener('click', function() {
     };
 
     // Create summary text
-    const summaryText = `Subject: ${formData.subject}\nClass: ${formData.class}\nChapter number: ${formData.chapter}\nChapter Name: ${formData.chapterName}\nlanguage  : ${formData.language}\nTest words : ${formData.testLevel}\nTotal Marks: ${formData.totalMarks}\nPassing Marks: ${formData.passingMarks}\nDifficulty Level: ${formData.difficulty}\nNumber of Questions: ${formData.questions}\nnumber of mcq: ${formData.mcq}\nno. of Assertion/region: ${formData.A}\nnumber of short question: ${formData.short}\nnumber of long question: ${formData.long}\nnumber of fill in the blanks: ${formData.f}\nnumber of true/false: ${formData.t}\nQuestion Source: ${formData.source}\nPublisher: ${formData.publisher}\nwhile making give questions from  : ${formData.numerical}\nSpecific Command: ${formData.specificCommand}\n you are a CBSE & NCERT teacher create test/ASSIGNMENT and make it in a proper way to which I can directly copy it and paste it and then make a print of it and put all the options in vertical series and use CBSE formate for making questions and only provide the contest & do not write any introduction , explanation or extra comments  `;
+   const summaryText = `Subject: ${formData.subject}
+Class: ${formData.class}
+Chapter Number: ${formData.chapter}
+Chapter Name: ${formData.chapterName}
+Language: ${formData.language}
+Test Level: ${formData.testLevel}
+Total Marks: ${formData.totalMarks}
+Passing Marks: ${formData.passingMarks}
+Difficulty Level: ${formData.difficulty}
+Number of Questions: ${formData.questions}
+MCQs: ${formData.mcq}
+Assertion/Reason: ${formData.A}
+Short Questions: ${formData.short}
+Long Questions: ${formData.long}
+Fill in the Blanks: ${formData.f}
+True/False: ${formData.t}
+Question Source: ${formData.source}
+Publisher: ${formData.publisher}
+Include Numerical Questions: ${formData.numerical}
+Specific Command: ${formData.specificCommand}
+
+Instructions:
+You are a CBSE & NCERT teacher. Create a test/assignment using proper CBSE format. 
+Do not include any introduction, explanation, or additional comments.
+Only provide the test content directly, cleanly formatted.
+Ensure all options are displayed in vertical format where applicable.
+The content should be ready to copy, paste, and print without modifications.
+The output must contain only the question paper without any comments, introductions,
+or assistant-like phrases. Do not use any phrases like 'Here is your test' or 'As you requested'.`;
 
     // Display summary
     document.getElementById('summaryText').innerText = summaryText;
